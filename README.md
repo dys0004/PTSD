@@ -7,9 +7,6 @@ This repository contains the pipeline and resources for performing Epigenome-Wid
 - **`Additional_files/`**  
   Contains supplementary files required for the analysis.
 
-- **`Continuous_model/`**  
-  Code and resources for performing EWAS with continuous variables (e.g., PTSD symptom severity).
-
   - **Key Scripts**:
     - `Step1_Enmix_QC_pipeline.R`: Initial quality control using the Enmix framework.
     - `Step2_Calculate_cellcomposition.R`: Calculation of cell composition estimates for covariate adjustment.
@@ -18,6 +15,9 @@ This repository contains the pipeline and resources for performing Epigenome-Wid
 
 - **`Dichotomous_model/`**  
   Scripts for conducting EWAS with categorical variables (e.g., PTSD case, Responder/NonResponder).
+  
+  - **`Continuous_model/`**  
+  Code and resources for performing EWAS with continuous variables (e.g., PTSD symptom severity).
 
 ## How to Use the Code
 #### Continuous Variable Model
