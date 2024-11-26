@@ -1,6 +1,6 @@
 # PTSD EWAS Analysis
 
-This repository contains the pipeline and resources for performing Epigenome-Wide Association Studies (EWAS) on PTSD-related data. The codebase supports both **continuous** and **categorical** variable models. (https://github.com/PGC-PTSD-EWAS/PGC-PTSD-Longitudinal-Analysis)
+This repository contains the pipeline and resources for performing Epigenome-Wide Association Studies (EWAS) on PTSD-related data. The codebase supports both **continuous** and **categorical** variable models. Most code adapted from (https://github.com/PGC-PTSD-EWAS/PGC-PTSD-Longitudinal-Analysis)
 
 ## Repository Structure
 
