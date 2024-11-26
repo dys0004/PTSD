@@ -16,21 +16,20 @@ This repository contains the pipeline and resources for performing Epigenome-Wid
 - **`Dichotomous_model/`**  
   Scripts for conducting EWAS with categorical variables (e.g., PTSD case, Responder/NonResponder).
   
-  - **`Continuous_model/`**  
-  Code and resources for performing EWAS with continuous variables (e.g., PTSD symptom severity).
+- **`Continuous_model/`**  
+  Code and resources for performing EWAS with continuous variables (e.g., PTSD symptom severity, PCL Score).
 
 ## How to Use the Code
-#### Continuous Variable Model
-1. Navigate to the `Continuous_model/` directory.
-2. Run the scripts sequentially:
+Input file: Raw IDATS, phenotype file
+1. Run the scripts sequentially:
    - `Step1_Enmix_QC_pipeline.R` → Quality control.
    - `Step2_Calculate_cellcomposition.R` → Estimate cell types.
    - `Step3.5_Calculate_ancestry_mPCs.R` → Calculate ancestry principal components.
    - `Step3_Combat_normalization_RUSH.R` → Normalize data for batch effects.
 
-#### Categorical Variable Model
-1. Navigate to the `Dichotomous_model/` directory.
-2. Follow the provided scripts for analyzing categorical variables, such as case-control comparisons.
+#### Variable Model
+1. Navigate to the `Dichotomous_model/` directory OR `Continuous_model/`
+2. Follow the provided scripts for analysis
 
 ### Generating Summary Statistics
-- Use the `SummaryStats_phenotypefile.R` script to produce descriptive statistics for your data.
+- Use the `SummaryStats_phenotypefile.R` script to produce descriptive statistics for your phenotype data.
