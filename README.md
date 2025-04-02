@@ -29,6 +29,13 @@ This repository contains the pipeline and resources for performing Epigenome-Wid
  🔄 **Customize:** The PTSD variable in these scripts is set to **PCL**.
  You can replace it with your preferred variable (e.g., CAPS, symptom domain scores).
 
+<p align="center">
+  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTQ4YmYxNmllZG1kcjMyYjZsNDV0bG80MHlzNTFxeDliNGJ3Y2wxNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/1sgetPM00wWqJpVUTl/giphy.gif" width="300" />
+  <br/>
+  <em> POV: Me running EWAS models at 4AM</em>
+</p>
+
+
 ## How to Use the Code
 Input file: Raw IDATS, phenotype file
 1. Run the scripts sequentially:
