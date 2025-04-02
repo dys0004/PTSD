@@ -43,3 +43,40 @@ Input file: Raw IDATS, phenotype file
 
 ### Generating Summary Statistics
 - Use the `SummaryStats_phenotypefile.R` script to produce descriptive statistics for your phenotype data.
+
+
+---
+
+## Model Reference
+
+| Type        | Formula                                                                 |
+|-------------|-------------------------------------------------------------------------|
+| Continuous  | ∆Beta ~ ∆PCL + ∆Cell Comp + Age + Sex + PCs                             |
+| Continuous  | DNAm ~ PCL Score + Age + Sex + Cell Comp + PCs + (1 | Participant ID)   |
+| Continuous  | mDNApost ~ mDNApre + ∆PCL + ∆Age + ∆Cell Composition + PCs + Sex        |
+| Categorical | ∆Beta ~ ResponseGroup + Age + Sex + ∆Cell Comp + PCs                    |
+| Categorical | DNAm_post ~ DNAm_pre + ResponseGroup + Age + Sex + ∆Cell Comp + PCs     |
+
+> **Note:** All models use **PCL** (PTSD Checklist) as the PTSD variable.  
+> You can modify this to use a different PTSD measure (e.g., CAPS) by editing the variable names in both the code and your phenotype file.
+
+
+---
+
+## Variable Definitions
+
+| Variable        | Description                                                                 |
+|-----------------|-----------------------------------------------------------------------------|
+| `PCL`           | PTSD Checklist total score. Used as the primary PTSD symptom variable.      |
+| `ResponseGroup` | Binary variable indicating treatment response: `1` = Responder (PCL ≤ 10), `0` = Nonresponder. |
+| `PTSD_Diff`     | Change in PTSD symptoms: `PCL_post - PCL_pre`.                             |
+| `Age` / `AgeDiff` | Age at time of sample collection, or age difference if using pre/post.     |
+| `Sex`           | Encoded as `0` = Male, `1` = Female.                                        |
+| `Cell Composition` | Proportions of immune cell types (CD8T, CD4T, NK, Bcell, Mono, Neu). Difference variables are computed as post - pre values. |
+| `PCs`           | Ancestry principal components (e.g., `Comp.1_pre`, `Comp.2_pre`).           |
+| `SampleID_pre` / `SampleID_post` | Sample identifiers for pre- and post-treatment timepoints.   |
+| `mDNApre` / `mDNApost` | Methylation values before and after treatment (logit-transformed M-values). |
+
+> You can customize variable names and thresholds (e.g., for `ResponseGroup` or `PCs`) in your phenotype file and the scripts.
+
+
