@@ -14,10 +14,20 @@ This repository contains the pipeline and resources for performing Epigenome-Wid
     - `Step3_Combat_normalization_RUSH.R`: Data normalization using the Combat method to minimize batch effects.
 
 - **`Dichotomous_model/`**  
-  Scripts for conducting EWAS with categorical variables (e.g., PTSD case, Responder/NonResponder).
-  
+  EWAS models with **categorical** variables (e.g., treatment responders vs nonresponders).
+
+  - `model2_LM_responseGroup.R`: Linear model evaluating treatment response (binary) using post-treatment DNAm.
+  - `model4_LM_responseGroup_deltaBeta.R`: Linear model evaluating whether responders show greater DNAm change (∆Beta) from pre to post.
+
 - **`Continuous_model/`**  
-  Code and resources for performing EWAS with continuous variables (e.g., PTSD symptom severity, PCL Score).
+  EWAS models with **continuous** variables (e.g., PTSD severity scores or clinical change).
+
+  - `model1_RE_PCL.R`: Random effects model testing PTSD symptom severity (PCL) and baseline DNAm.
+  - `model3_LM_deltaPCL.R`: Linear model testing ∆PCL (symptom change) as a predictor of ∆Beta.
+  - `model5_LM_mDNApost_deltaPCL.R`: Linear model testing whether symptom change predicts post-treatment DNAm, adjusting for pre-DNAm and other covariates.
+ 
+ 🔄 **Customize:** The PTSD variable in these scripts is set to **PCL**.
+ You can replace it with your preferred variable (e.g., CAPS, symptom domain scores).
 
 ## How to Use the Code
 Input file: Raw IDATS, phenotype file
