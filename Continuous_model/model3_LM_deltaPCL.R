@@ -1,7 +1,7 @@
 # EWAS script
 # Code adapted from GitHub repository: 
 # https://github.com/PGC-PTSD-EWAS/PGC-PTSD-Longitudinal-Analysis
-# Model 2: Continuous model
+# Continuous model
 # Formula: ∆Beta ~ ∆PCL + ∆Cell Composition + Age + Sex + Ancestry PCs
 ################################################################################
 
@@ -15,7 +15,7 @@ library(tidyverse)
 # Load phenotype and methylation data
 ############################################################
 
-setwd("/Volumes/som-ts/GynOb/SmithLab/NewData/People/Dasia/RUSH/Step4_EWAS_DeltaBeta_DeltaPCL_DeltaCellComp_Age_Sex_RUSH/withPCs")
+setwd("/your_folder/")
 
 # Read phenotype data in wide format (one row per participant, pre/post data in columns)
 pheno <- read.csv("wideformat.csv")
