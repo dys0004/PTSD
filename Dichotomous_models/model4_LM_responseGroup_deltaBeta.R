@@ -15,7 +15,7 @@ library(tidyverse)
 ############################################################
 
 # Set working directory to where the data is stored
-setwd("/Volumes/som-ts/GynOb/SmithLab/NewData/People/Dasia/RUSH/Step4_EWAS_DeltaBetaResponseGroup_deltaCellComp_Age_Sex_RUSH/WithPCs")
+setwd("/your_folder/")
 
 # Read wide-format phenotype file (one row per participant, columns for pre/post)
 pheno <- read.csv("pheno_wideformat.csv")
